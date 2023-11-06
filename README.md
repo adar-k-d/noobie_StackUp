@@ -33,4 +33,4 @@ noobie
 ### Hosted Webiste
 Our webisite can be run on the go by visiting {Webiste link}. 
 ### Run locally
-- steps to run locally
+- steps to run locally.
