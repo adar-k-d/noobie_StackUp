@@ -1,3 +1,7 @@
+
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -58,12 +62,12 @@ body {
 .slider-nav a:hover{
     opacity:1;
 }
-
+/*---------navigation bar-------------*/
 /* new ones */
-.logo img {
-    width: 230px; /* You can adjust the width as needed */
-    height: 70px;
-    padding-left: 10%;
+.logo-img{
+    width: 150px; /* You can adjust the width as needed */
+    height: auto;
+    padding-left: 5px;
 }
 
 /* Style the navigation links */
@@ -80,8 +84,9 @@ nav {
     color: #ff6600; /* Example color on hover */
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0px; /* Adjust the top and bottom padding as needed */
+    padding: 5px 0; /* Adjust the top and bottom padding as needed */
     line-height: 3; /* Set the line-height to 1 to center items vertically */
+   
 }
 .nav-links {
     list-style: none;
@@ -99,12 +104,130 @@ nav li a {
     display:inline-block;
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     transition: transform 0.2s;
     margin-right: 50px;
 }
 
+/*----------login-------------*/
+
+.form-box{
+    width:90%;
+    position: absolute;
+    max-width: 450px;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    background: #fff;
+    padding: 50px 60px 70px;
+    text-align: center;
+    display: none;
+    opacity: 0; /* Start with 0 opacity to make it invisible */
+    transition: opacity 0.5s;
+}
+.form-box.show {
+    opacity: 1; /* When the .show class is applied, set opacity to 1 to make it visible */
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color:#3c00a0;
+    position: relative;
+
+
+}
+.form-box h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-field{
+    background: #eaeaea;
+    margin:15px 0;
+    border-radius: 3px;
+    display:flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow:hidden;
+    transition: border-color 0.3s, max-height 0.5s;
+
+
+}
+.input-field input:focus {
+    border-color: #3c00a0; /* Change the border color on focus */
+    max-height: 100px; /* Expand the input field on focus */
+}
+input{
+    background: transparent;
+    width:100%;
+    border:0;
+    outline: 0;
+    padding:18px 15px;
+
+}
+.input-field i{
+    margin-left: 15px;
+    color: #999;
+
+}
+
+form p{
+    text-align: left;
+    font-size: 15px;
+}
+
+form p a{
+    text-decoration: none;
+    color:#3c00a0;
+
+}
+
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.btn-field button{
+    flex-basis: 48%;
+    background: #3c00a0;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+
+}
+.input-group{
+    height: 250px;
+
+}
+.btn-field button.disable{
+    background: #eaeaea;
+    color:#555;
+
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 50px;
+    color: #3c00a0;
+    cursor: pointer;
+}
 
 
 /* ----------footer------------ */
