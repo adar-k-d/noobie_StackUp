@@ -20,6 +20,7 @@ body {
     max-width:48rem;
     margin:0 auto;
 
+
 }
 .slider{
     display: flex;
@@ -40,6 +41,9 @@ body {
     object-fit: cover;
     flex:1 0 100%;
 
+}
+.slider img:hover {
+    transform:scale(0.99);
 }
 .slider-nav{
     display:flex;
@@ -65,9 +69,9 @@ body {
 /*---------navigation bar-------------*/
 /* new ones */
 .logo-img{
-    width: 150px; /* You can adjust the width as needed */
+    width: 100px; /* You can adjust the width as needed */
     height: auto;
-    padding-left: 5px;
+    padding: 5px 0 10px 5px; /*the values are top,right,bottom,ceter*/
 }
 
 /* Style the navigation links */
@@ -84,7 +88,7 @@ nav {
     color: #ff6600; /* Example color on hover */
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0; /* Adjust the top and bottom padding as needed */
+    padding: 0px 0px; /* Adjust the top and bottom padding as needed */
     line-height: 3; /* Set the line-height to 1 to center items vertically */
    
 }
@@ -243,6 +247,7 @@ footer{
 .about-us {
     margin: 0 auto;
     max-width: 800px;
+
 }
 
 .about-us h2 {
@@ -253,3 +258,37 @@ footer{
     font-size: 16px;
     line-height: 1.4;
 }
+
+
+/* --------detailsbox---------- */
+.details-container {
+    text-align: center;
+    padding: 2rem;  /*chnages the height from the footer*/
+   
+}
+.details-wrapper{
+    position: relative;
+    max-width:70rem;
+    
+    margin:0 auto;
+}
+.details{
+    display:flex;  /*was flex before*/
+    aspect-ratio: 16/3;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25) ;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    background-color: #5c35b0;
+    justify-content: center;
+    
+
+}
+.outer {
+    padding-top: 25px;
+}
+/* .detail1 {
+    display:none;
+} */
