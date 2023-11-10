@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event listing</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/838e025b21.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300&family=Roboto+Slab:wght@700&family=Source+Code+Pro&family=Source+Sans+3&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,15 +15,18 @@
     <nav>
        <!-- <div class="logo"> -->
         <img src="images/logo_small.svg" alt="Your Logo" class="logo-img">
+        <img src="images/eventia-logo.png" alt="Your Logo" class="logo-img" id="eventiaLogo">
+        
+
        <!-- </div> -->
             
         
         <ul class="nav-links">
             
             <li><a href="https://adar-k-d.github.io/noobie_StackUp/">Home</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="#about-us">About Us</a></li>
             <li><a href="#">Events</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="#" id="loginLink">Login</a></li>
         </ul>
     </nav>
 <!--------------slider--------------------->
@@ -43,8 +48,8 @@
    <section>
    </section>
    <!------LOGIN FORM-------->
-   <div class="form-box" id="loginform">
-    <button id="closeButton" class="close-button">&times;</button>
+   <div class="form-box" id="formBox">
+    <button id="closeButton" style="float: right;"><i class="fa-solid fa-xmark"></i></button>
         <h1 id="title">
             Sign Up
         </h1>
@@ -93,7 +98,7 @@
 </section>
 <footer>
     <div class="container">
-            <div class="about-us">
+            <div class="about-us" id="about-us">
                     <h2>About Us</h2>
                 
                 <p>Discover, Connect, Celebrate! We are your go-to source for all things events. Our mission is to bring people together by providing a platform to explore and share exciting events in your area. From concerts to workshops, we've got you covered. Join us in creating memorable experiences!"</p>
@@ -102,7 +107,7 @@
 </footer>
 
 
-
+<script src="https://kit.fontawesome.com/838e025b21.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

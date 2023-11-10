@@ -33,9 +33,7 @@ body {
     max-width: 100%;
 }
 .slider img{
-   /* flex:1 0 100%;
-    scroll-snap-align: start;
-    object-fit:cover;*/
+  
     width:100%;
     max-width: 100%;
     object-fit: cover;
@@ -67,16 +65,19 @@ body {
     opacity:1;
 }
 /*---------navigation bar-------------*/
-/* new ones */
-.logo-img{
-    width: 100px; /* You can adjust the width as needed */
-    height: auto;
-    padding: 5px 0 10px 5px; /*the values are top,right,bottom,ceter*/
-}
 
+.logo-img{
+    width: 100px; 
+    height: auto;
+    padding: 5px 0 10px 5px; 
+}
+#eventiaLogo {
+    width: 190px; 
+    margin-left: -500px; 
+}
 /* Style the navigation links */
 
-/* Add these styles for the navigation container */
+
 
 .nav-links li {
     margin-right: 20px;
@@ -85,11 +86,11 @@ nav {
     background-color: #2979b3;
     display: flex;
 
-    color: #ff6600; /* Example color on hover */
+    color: #3c00a0; 
     justify-content: space-between;
     align-items: center;
-    padding: 0px 0px; /* Adjust the top and bottom padding as needed */
-    line-height: 3; /* Set the line-height to 1 to center items vertically */
+    padding: 0px 0px; 
+    line-height: 3; 
    
 }
 .nav-links {
@@ -101,7 +102,7 @@ nav {
 .nav-links li a:hover {
     
     transform:scale(1.2);
-    color: #ff6600;
+    color: #3c00a0;
 
 }
 nav li a {
@@ -112,6 +113,7 @@ nav li a {
     font-weight: bold;
     transition: transform 0.2s;
     margin-right: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*----------login-------------*/
@@ -127,12 +129,9 @@ nav li a {
     padding: 50px 60px 70px;
     text-align: center;
     display: none;
-    opacity: 0; /* Start with 0 opacity to make it invisible */
-    transition: opacity 0.5s;
+    
 }
-.form-box.show {
-    opacity: 1; /* When the .show class is applied, set opacity to 1 to make it visible */
-}
+
 .form-box h1{
     font-size: 30px;
     margin-bottom: 60px;
@@ -162,13 +161,13 @@ nav li a {
     max-height: 65px;
     transition: max-height 0.5s;
     overflow:hidden;
-    transition: border-color 0.3s, max-height 0.5s;
+    
 
 
 }
 .input-field input:focus {
-    border-color: #3c00a0; /* Change the border color on focus */
-    max-height: 100px; /* Expand the input field on focus */
+    border-color: #3c00a0; 
+    max-height: 100px; 
 }
 input{
     background: transparent;
@@ -222,17 +221,19 @@ form p a{
     color:#555;
 
 }
-.close-button {
+#closeButton {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: transparent;
+    background-color: transparent;
     border: none;
-    font-size: 50px;
-    color: #3c00a0;
     cursor: pointer;
 }
 
+#closeButton i {
+    color: #333;
+    font-size: 30px;
+}
 
 /* ----------footer------------ */
 footer{
@@ -253,17 +254,20 @@ footer{
 .about-us h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+
 }
 .about-us p {
     font-size: 16px;
     line-height: 1.4;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
 /* --------detailsbox---------- */
 .details-container {
     text-align: center;
-    padding: 2rem;  /*chnages the height from the footer*/
+    padding: 2rem; 
    
 }
 .details-wrapper{
@@ -273,7 +277,7 @@ footer{
     margin:0 auto;
 }
 .details{
-    display:flex;  /*was flex before*/
+    display:flex;  
     aspect-ratio: 16/3;
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
@@ -283,12 +287,11 @@ footer{
     max-width: 100%;
     background-color: #5c35b0;
     justify-content: center;
-    
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
 
 }
 .outer {
     padding-top: 25px;
+    font-family: 'Open Sans', sans-serif;
 }
-/* .detail1 {
-    display:none;
-} */

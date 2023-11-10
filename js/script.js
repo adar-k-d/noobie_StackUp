@@ -1,16 +1,4 @@
-//let scrollAmount = 0;
-//let slider = document.querySelector('.slider');
 
-//function autoScroll() {
-   // slider.scrollTo(scrollAmount++, 0);
-
-    // Start over when reaching end of scroll
-  //  if (scrollAmount > slider.scrollWidth) {
-   //     scrollAmount = 0;
-    //}
-//}
-
-//let scrollInterval = setInterval(autoScroll, 50); // Adjust speed by changing delay time
 
 const contentDivs = document.querySelectorAll('#description');
 const aDivs = document.querySelectorAll('.slide1');
@@ -54,7 +42,7 @@ bDivs.forEach((slide2) => {
                 cPic.forEach((detail3) => {
                     detail3.style.display = 'none';
                 });
-        // Show the corresponding content div
+      
         description.style.display = 'block';
 
 
@@ -71,7 +59,7 @@ cDivs.forEach((slide3) => {
                 bPic.forEach((detail2) => {
                     detail2.style.display = 'none';
                 });
-        // Show the corresponding content div
+      
         description.style.display = 'block';
 
 
@@ -98,7 +86,7 @@ function autoScroll() {
     }
 }
 
-let scrollInterval = setInterval(autoScroll, 1000); // Adjust this value to change the delay between scrolls
+let scrollInterval = setInterval(autoScroll, 2000); 
 
 
 
@@ -119,28 +107,14 @@ signupBtn.onclick = function(){
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
 }
+let loginLink = document.getElementById("loginLink");
+let formBox = document.getElementById("formBox");
 
-const loginform = document.getElementById('loginform');
-        const loginbutton = document.getElementById('loginbutton');
-
-        // Add a click event listener to the "Login" button
-        loginbutton.addEventListener('click', function() {
-            // Toggle the visibility of the login form
-           
-            if (loginform.style.display === 'none' || loginform.style.display === '') {
-                loginform.style.display = 'block';
-            } else {
-                loginform.style.display = 'none';
-            }
-        });
-      
-
-const closeButton = document.getElementById("closeButton");
-const loginForm = document.getElementById("loginform");
-
-if (closeButton && loginForm) {
-    closeButton.addEventListener("click", function () {
-        loginForm.style.display = "none";
-    });
+loginLink.onclick = function(){
+    formBox.style.display = "block";
 }
+let closeButton = document.getElementById("closeButton");
 
+closeButton.onclick = function(){
+    formBox.style.display = "none";
+}
