@@ -1,5 +1,4 @@
 
-
 const contentDivs = document.querySelectorAll('#description');
 const aDivs = document.querySelectorAll('.slide1');
 const bDivs = document.querySelectorAll('.slide2');
@@ -96,12 +95,14 @@ let nameField=document.getElementById("nameField");
 let title=document.getElementById("title");
 
 signinBtn.onclick = function(){
+    signIn();
     nameField.style.maxHeight = "0";
     title.innerHTML="Sign In";
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
 }
 signupBtn.onclick = function(){
+    signUp();
     nameField.style.maxHeight = "60px";
     title.innerHTML="Sign Up";
     signupBtn.classList.remove("disable");
@@ -116,5 +117,66 @@ loginLink.onclick = function(){
 let closeButton = document.getElementById("closeButton");
 
 closeButton.onclick = function(){
+    formBox.style.display = "none";
+}
+const logoutLink = document.querySelectorAll('#logoutLink');
+logoutLink.forEach((vis) => {
+    vis.style.display = 'none';
+});
+const loginL = document.querySelectorAll('.inlink');
+
+//setting up firebase with our website
+const firebaseApp = firebase.initializeApp({
+    apiKey: "AIzaSyCh6RFwRkcKwoeo4gpgp5zztoXfHJXTVDM",
+    authDomain: "eventia-bdc12.firebaseapp.com",
+    databaseURL: "https://eventia-bdc12-default-rtdb.firebaseio.com",
+    projectId: "eventia-bdc12",
+    storageBucket: "eventia-bdc12.appspot.com",
+    messagingSenderId: "430577851020",
+    appId: "1:430577851020:web:d808d1f5b2309106a4f9a9"
+});
+const db = firebaseApp.firestore();
+const auth = firebaseApp.auth();
+const signUp = () => {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    // console.log(email,password)
+    //firecode
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((result) => {
+    // Signed in 
+    console.log("you are signed up");
+    formBox.style.display = "none";
+    // ...
+  })
+  .catch((error) => {
+    console.log(error.code);
+    console.log(error.message);
+    // ..
+  });
+}
+const signIn = () => {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+firebase.auth().signInWithEmailAndPassword(email, password)
+  .then((result) => {
+    desap();
+    // Signed in
+    // document.write("u are in");
+    // ...
+  })
+  .catch((error) => {
+    console.log(error.code);
+    console.log(error.message);
+  });
+}
+const desap = () => {
+    
+    loginL.forEach((vis) => {
+        loginL.style.display = 'none';
+    });
+    logoutLink.forEach((vis) => {
+        vis.style.display = 'block';
+    });
     formBox.style.display = "none";
 }

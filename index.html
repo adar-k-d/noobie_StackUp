@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300&family=Roboto+Slab:wght@700&family=Source+Code+Pro&family=Source+Sans+3&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-auth-compat.js"></script>
 </head>
 <body>
 
@@ -26,7 +29,8 @@
             <li><a href="https://adar-k-d.github.io/noobie_StackUp/">Home</a></li>
             <li><a href="#about-us">About Us</a></li>
             <li><a href="#">Events</a></li>
-            <li><a href="#" id="loginLink">Login</a></li>
+            <li><a href="#" id="loginLink" class="inlink">Login</a></li>
+            <li><a href="#" id="logoutLink">Logout</a></li>
         </ul>
     </nav>
 <!--------------slider--------------------->
@@ -61,16 +65,18 @@
                 </div>
                 <div class="input-field">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" placeholder="Email">
+                    <input id="email" type="email" placeholder="Email">
                 </div>
                 <div class="input-field">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" placeholder="Password">
+                    <input id="password" type="password" placeholder="Password">
                 </div>
-                <p>Lost password? <a href="#">Click Here!</a></p>
+                <!-- <p onclick="signUp()" >submit <a href="#">Click Here!</a></p> -->
+                
+
             </div>
             <div class="btn-field">
-                <button type="button" id="signupBtn">Sign Up</button>
+                <button type="button"  id="signupBtn">Sign Up</button>
                 <button type="button"class="disable"id="signinBtn">Sign In</button>
             </div>
         </form>
