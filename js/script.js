@@ -178,13 +178,13 @@ firebase.auth().signInWithEmailAndPassword(email, password)
     console.log(error.message);
   });
 }
-const reset = () => {
-    
-    loginL.forEach((vis) => {
-        loginL.style.display = 'block';
-    });
+
+function reset(){
     logoutLink.forEach((vis) => {
         vis.style.display = 'none';
     });
-    // formBox.style.display = "none";
+    loginL.forEach((vis) => {
+        vis.style.display = 'block';
+    });    
+
 }
