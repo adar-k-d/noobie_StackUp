@@ -19,9 +19,8 @@ Welcome to the Campus Event Listing Platform! This web application is designed t
 ## Team Id
 noobie
 ## Link to product walkthrough
-[link to video]
-## How it Works ?
-- 
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1VSms7gQc4BtVFFA5-UqjD1WHFo4UzVMZ/view?usp=drive_link" frameborder="0" allowfullscreen></iframe>
+
 ## Tools and Libraries used
 - **[Figma](https://www.figma.com)**: The UI/UX design is done with Figma to create good-looking and fucntional Website.
 
