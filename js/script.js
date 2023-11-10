@@ -160,23 +160,31 @@ const signIn = () => {
     const password = document.getElementById("password").value;
 firebase.auth().signInWithEmailAndPassword(email, password)
   .then((result) => {
-    desap();
+    logoutLink.forEach((vis) => {
+        vis.style.display = 'block';
+    });
+    loginL.forEach((vis) => {
+        vis.style.display = 'none';
+    });
+    // document.write("ii");
+
     // Signed in
     // document.write("u are in");
     // ...
+    formBox.style.display = "none";
   })
   .catch((error) => {
     console.log(error.code);
     console.log(error.message);
   });
 }
-const desap = () => {
+const reset = () => {
     
     loginL.forEach((vis) => {
-        loginL.style.display = 'none';
+        loginL.style.display = 'block';
     });
     logoutLink.forEach((vis) => {
-        vis.style.display = 'block';
+        vis.style.display = 'none';
     });
-    formBox.style.display = "none";
+    // formBox.style.display = "none";
 }
