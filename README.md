@@ -24,13 +24,19 @@ noobie
 - 
 ## Tools and Libraries used
 - **[Figma](https://www.figma.com)**: The UI/UX design is done with Figma to create good-looking and fucntional Website.
-- **[FireBase](https://firebase.google.com/)**: The backend of our Event Management Website is powered by FireBase by Google. 
-## How to configure 
-<!-- Requirements for compilation -->
+
 ## How to Run
 <b> Your can either visit our hosted website or run it locally.</b><br>
 
 ### Hosted Webiste
-Our webisite can be run on the go by visiting {Webiste link}. 
+Our webisite can be run on the go by visiting [this link](https://adar-k-d.github.io/noobie_StackUp/) 
 ### Run locally
-- steps to run locally
+<b> We will be using VSCode to run this website in the localhost </b><br>
+1. Go to extensions panel in the VSCode and install the live server plugin.
+2. Now clone our repo and change it to the current directory.
+```
+git clone https://github.com/adar-k-d/noobie_StackUp.git
+cd noobie_StackUp
+```
+3. Now we open the VSCode by using `code .`
+4. Their will be a `Go Live` button in the bottom right corner.
