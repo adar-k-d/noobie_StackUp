@@ -207,16 +207,18 @@ function postmessage() {
     if (condition == "out") {
     window.alert("Log In to Add Your Events");
     } else if (condition == "in") {
-    window.alert("Functionality not implemented ;) ");
+    // window.alert("Functionality not implemented ;) ");
+    openModal();
     }
 }
 
+/*  commented because the user should most only when logged in
 // Add an event listener to the 'POST' button
 document.querySelector('a[title="Click here to post your own events"]').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default behavior of the link
     openModal(); // Call the function to open the event creation form
   });
-  
+*/  
   // Function to open the event creation form
   function openModal() {
     var modal = document.getElementById('eventModal');
