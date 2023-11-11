@@ -138,12 +138,13 @@ const firebaseApp = firebase.initializeApp({
     messagingSenderId: "430577851020",
     appId: "1:430577851020:web:d808d1f5b2309106a4f9a9"
 });
+//authentication
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 const signUp = () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    // console.log(email,password)
+  
     //firecode
     firebase.auth().createUserWithEmailAndPassword(email, password)
   .then((result) => {
@@ -209,4 +210,25 @@ function postmessage() {
     window.alert("Functionality not implemented ;) ");
     }
 }
+
+// Add an event listener to the 'POST' button
+document.querySelector('a[title="Click here to post your own events"]').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    openModal(); // Call the function to open the event creation form
+  });
+  
+  // Function to open the event creation form
+  function openModal() {
+    var modal = document.getElementById('eventModal');
+    modal.style.display = 'block';
+  }
+  
+  // Function to close the modal
+  function closeModal() {
+    var modal = document.getElementById('eventModal');
+    modal.style.display = 'none';
+  }
+  
+  // Add event listener to the close button
+  document.querySelector('.close').addEventListener('click', closeModal);
 
