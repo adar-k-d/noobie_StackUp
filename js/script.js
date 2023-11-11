@@ -70,7 +70,6 @@ cDivs.forEach((slide3) => {
 let slider = document.querySelector('.slider');
 let images = document.querySelectorAll('.slider img');
 let imageIndex = 0;
-
 function autoScroll() {
     if (imageIndex >= images.length) {
         imageIndex = 0;
@@ -87,7 +86,7 @@ function autoScroll() {
 
 let scrollInterval = setInterval(autoScroll, 2000); 
 
-
+let condition = "out";
 
 let signupBtn=document.getElementById("signupBtn");
 let signinBtn=document.getElementById("signinBtn");
@@ -96,18 +95,22 @@ let title=document.getElementById("title");
 
 signinBtn.onclick = function(){
     signIn();
+    condition = "in";  //signed in 
     nameField.style.maxHeight = "0";
     title.innerHTML="Sign In";
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
 }
+
 signupBtn.onclick = function(){
     signUp();
+    condition = "out";  //signed out
     nameField.style.maxHeight = "60px";
     title.innerHTML="Sign Up";
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
 }
+
 let loginLink = document.getElementById("loginLink");
 let formBox = document.getElementById("formBox");
 
@@ -151,7 +154,10 @@ const signUp = () => {
   })
   .catch((error) => {
     console.log(error.code);
-    console.log(error.message);
+    if((email != "")&&(password != "")) {
+        window.alert(error.message);
+        formBox.style.display = "none";
+    }
     // ..
   });
 }
@@ -175,7 +181,11 @@ firebase.auth().signInWithEmailAndPassword(email, password)
   })
   .catch((error) => {
     console.log(error.code);
-    console.log(error.message);
+    if((email != "")&&(password != "")) {
+        window.alert(error.message);
+        formBox.style.display = "none";
+    }
+
   });
 }
 
@@ -188,3 +198,15 @@ function reset(){
     });    
 
 }
+
+
+// condition 'in' signed in
+// condition 'out' signed out
+function postmessage() {
+    if (condition == "out") {
+    window.alert("Log In to Add Your Events");
+    } else if (condition == "in") {
+    window.alert("Functionality not implemented ;) ");
+    }
+}
+
