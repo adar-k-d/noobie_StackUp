@@ -220,7 +220,7 @@ document.querySelector('a[title="Click here to post your own events"]').addEvent
   });
 */  
   // Function to open the event creation form
-  function openModal() {
+ function openModal() {
     var modal = document.getElementById('eventModal');
     modal.style.display = 'block';
   }
@@ -233,4 +233,5 @@ document.querySelector('a[title="Click here to post your own events"]').addEvent
   
   // Add event listener to the close button
   document.querySelector('.close').addEventListener('click', closeModal);
+
 
