@@ -7,8 +7,7 @@ Welcome to the Campus Event Listing Platform! This web application is designed t
 3. **[Product Walkthrough](#link-to-product-walkthrough)**
 4. **[How it Works](#how-it-worksd)**
 5. **[Tools and libraries used](#tools-and-libraries-used)**
-6. **[Configeration](#how-to-configure)**
-7. **[How to run](#how-to-run)**
+6. **[How to run](#how-to-run)**
     - [Website link](#hosted-webiste)
     - [Run Locally](#run-locally)
 ## Team members
@@ -19,10 +18,15 @@ Welcome to the Campus Event Listing Platform! This web application is designed t
 ## Team Id
 noobie
 ## Link to product walkthrough
-[Video LINK](https://drive.google.com/file/d/1VSms7gQc4BtVFFA5-UqjD1WHFo4UzVMZ/view?usp=drive_link)
+Binoy  CE :[Video Link](https://drive.google.com/file/d/12IQq9oyfH5E3DpRAccK38XdsN-Itqcf2/view?usp=drive_link)<br>
+Ashwin V Menon :[Video Link](https://www.loom.com/share/68e6693565a944ad8bfa7a8357ea8c1c?sid=5253234e-653d-4719-95ad-9ed7f3e62637)<br>
+Adasrh K D :[Video Link](https://www.loom.com/share/935f02fc0a8d47a19a4492fc4339afd0?sid=bfb5ee7a-31e2-4cea-9682-3d27c006891b)<br>
+
+
 
 ## Tools and Libraries used
 - **[Figma](https://www.figma.com)**: The UI/UX design is done with Figma to create good-looking and fucntional Website.
+- **[Firebase](https://firebase.google.com/)**: The authentication is done with firebase
 
 ## How to Run
 <b> Your can either visit our hosted website or run it locally.</b><br>
